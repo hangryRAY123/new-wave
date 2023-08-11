@@ -1,0 +1,10 @@
+mixin image-card(data = {})
+  - const {img, highlightedText, splittingText} = data
+  - const {path, name, format, width, height, alt} = img
+
+  .image-card(data-image-card)&attributes(attributes)
+    .image-card__image
+      +picture(path, name, format, width, height, alt)
+    .image-card__content
+      p.image-card__text.image-card__text--highlighted!= highlightedText
+      p.image-card__text(data-image-card="text")!= splittingText

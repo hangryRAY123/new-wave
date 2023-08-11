@@ -1,0 +1,49 @@
+.social {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: size(252px);
+
+  &__item {
+    margin-right: size(20px);
+    margin-bottom: size(5px);
+
+    &:nth-child(4n) {
+      margin: 0;
+    }
+
+    @include vp-1023 {
+      margin-right: size(24px);
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: $trans-default;
+
+    svg {
+      width: size(48px);
+      height: size(48px);
+      fill: $color-default-white;
+      transition: $trans-default;
+    }
+  }
+
+  &__link:hover svg,
+  &__link:focus-visible svg {
+    fill: #cccccc;
+  }
+
+  &__link:active svg {
+    fill: $color-default-black;
+  }
+
+  @include vp-1023 {
+    margin-left: size(-4px);
+    max-width: size(264px);
+  }
+}

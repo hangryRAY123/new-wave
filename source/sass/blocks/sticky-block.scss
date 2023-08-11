@@ -1,0 +1,28 @@
+.sticky-block {
+  position: relative;
+  padding-top: size(10px);
+  padding-bottom: 2%;
+  width: 100%;
+
+  @include vp-1023 {
+    display: none;
+  }
+
+  &__inner {
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+  }
+
+  &__inner img {
+    width: size(444px);
+    height: size(523px);
+    background-color: $color-light-grey;
+    object-fit: cover;
+  }
+
+  &__wrap {
+    width: 100%;
+    height: 100%;
+  }
+}

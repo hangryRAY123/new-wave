@@ -1,0 +1,129 @@
+.moving-sticky-block {
+  padding-top: size(8px);
+  width: 100%;
+  font-size: size(30px);
+  line-height: size(41px);
+
+  @include vp-1023 {
+    padding-top: 0;
+    font-size: size(20px);
+    line-height: size(27px);
+  }
+
+  @include vp-767 {
+    font-size: size(20px);
+    line-height: size(27px);
+    padding-top: 0;
+  }
+
+  &__title {
+    @include vp-1023 {
+      align-self: flex-start;
+    }
+  }
+
+  &__wrapper p {
+    margin: 0;
+    font-size: inherit;
+    line-height: inherit;
+    margin-bottom: size(45px);
+    margin-top: size(22px);
+    margin-right: size(91px);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include vp-1023 {
+      margin-top: size(18px);
+      margin-bottom: size(30px);
+      margin-right: 0;
+    }
+
+    @include vp-767 {
+      margin-top: size(21px);
+      margin-bottom: size(39px);
+    }
+  }
+
+  &--right .title {
+    margin-left: size(75px);
+    margin-right: 0;
+
+    @include vp-1023 {
+      margin: 0;
+      margin-top: size(-3px);
+    }
+  }
+
+  &--right p {
+    margin-left: size(75px);
+    margin-right: 0;
+
+    @include vp-1023 {
+      margin: 0;
+      margin-top: size(24px);
+      margin-bottom: size(20px);
+    }
+
+    @include vp-767 {
+      margin-top: size(25px);
+      margin-bottom: size(18px);
+
+      &:last-child {
+        margin-bottom: size(2px);
+      }
+    }
+  }
+
+  &__img-box {
+    margin: 0;
+    margin-bottom: size(38px);
+    width: 100%;
+
+    @include vp-1023 {
+      margin-bottom: size(30px);
+      width: 100%;
+      height: auto;
+    }
+
+    @include vp-767 {
+      margin-bottom: size(30px);
+    }
+  }
+
+  &__img-box img {
+    margin-bottom: size(10px);
+    width: 100%;
+    height: size(479px);
+    background-color: $color-biege;
+    object-fit: cover;
+
+    @include vp-1023 {
+      width: 100%;
+      height: size(212px);
+    }
+  }
+
+  &--right .moving-sticky-block__img-box {
+    @include vp-1023 {
+      width: 100%;
+      height: auto;
+    }
+
+    @include vp-767 {
+      margin-top: size(24px);
+      margin-bottom: size(-8px);
+      width: size(334px);
+      height: size(204px);
+    }
+  }
+
+  &--right img {
+    height: size(440px);
+
+    @include vp-1023 {
+      height: size(204px);
+    }
+  }
+}

@@ -1,0 +1,44 @@
+.preloader {
+  background-color: $color-bgpreloader-pink;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+
+  &__loader {
+    position: absolute;
+    top: calc((100vh - #{size(136px)}) / 2);
+    left: calc((100vw - #{size(232px)}) / 2);
+
+    @include vp-1023 {
+      top: calc((100vh - #{size(65px)}) / 2);
+      left: calc((100vw - #{size(111px)}) / 2);
+    }
+
+    @include vp-767 {
+      top: calc((100vh - #{size(65px)}) / 2);
+      left: calc((100vw - #{size(111px)}) / 2);
+    }
+  }
+
+  &__icon svg {
+    width: size(232px);
+    height: size(136px);
+
+    @include vp-1023 {
+      width: size(111px);
+      height: size(65px);
+    }
+
+    @include vp-767 {
+      width: size(111px);
+      height: size(65px);
+    }
+  }
+
+  &.is-hidden {
+    display: none;
+  }
+}

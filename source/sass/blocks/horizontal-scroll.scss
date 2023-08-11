@@ -1,0 +1,18 @@
+.horizontal-scroll {
+  position: relative;
+
+  &__sticky {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+    padding: size(80px) 0 0;
+  }
+
+  &__content {
+    width: max-content;
+  }
+}

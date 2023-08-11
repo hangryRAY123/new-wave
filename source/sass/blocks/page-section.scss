@@ -1,0 +1,31 @@
+.page-section {
+  padding: size(180px) 0 0;
+
+  @include vp-1023 {
+    padding: size(60px) 0 0;
+  }
+
+  &--small-padding {
+    padding: size(100px) 0 0;
+
+    @include vp-1023 {
+      padding: size(60px) 0 0;
+    }
+  }
+
+  &--no-padding {
+    padding: 0;
+
+    @include vp-1023 {
+      padding: 0;
+    }
+  }
+
+  &--sticky-block {
+    padding: size(170px) 0 0;
+
+    @include vp-1023 {
+      padding: size(60px) 0 0;
+    }
+  }
+}

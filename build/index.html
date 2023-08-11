@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>New Wave Art Gallery</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="New Wave Art Gallery — Художественная галерея New Wave">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest" crossorigin="use-credentials">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#f32a91">
+    <meta name="msapplication-TileColor" content="#f32a91">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="preload" href="fonts/Nunito-ExtraBold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Nunito-Regular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/SpaceGrotesk-Bold.woff2" as="font" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <section class="preloader" data-preloader>
+      <div class="preloader__loader">
+        <div class="preloader__icon" data-preloader="preloader-icon">
+          <svg width="232" height="136" aria-hidden="true">
+            <use xlink:href="img/stack.svg#preloader"></use>
+          </svg>
+        </div>
+      </div>
+    </section>
+    <div class="wrapper">
+      <header class="header" data-header="sticky">
+        <div class="container"><span class="header__logo"><img src="img/svg/logo.svg" width="91" height="53" alt="Логотип"></span>
+          <nav class="main-nav">
+            <div class="main-nav__wrapper">
+              <ul class="main-nav__list">
+                <li class="main-nav__item"><a class="main-nav__link main-nav__link--dark-purple" href="#" data-move-to="#about" data-offset="header">About</a></li>
+                <li class="main-nav__item"><a class="main-nav__link main-nav__link--hit-pink" href="#" data-move-to="#exhibitions" data-offset="header">Exhibitions</a></li>
+                <li class="main-nav__item"><a class="main-nav__link main-nav__link--waikawa-grey" href="#" data-move-to="#visit-us" data-offset="header">Visit us</a></li>
+              </ul>
+            </div>
+          </nav>
+          <button class="header__toggle btn-reset" type="button" aria-label="Переключатель отображения меню" aria-pressed="false" data-burger>
+            <svg width="41" height="41" aria-hidden="true">
+              <use xlink:href="img/stack.svg#icon-burger"></use>
+            </svg>
+          </button>
+        </div>
+      </header>
+      <main>
+        <div class="page-content">
+          <section class="page-section page-section--no-padding" data-section-animation data-start="top bottom" data-end="center bottom">
+            <div class="page-section__animation" data-animation-direction="from" data-animation="">
+              <section class="intro">
+                <div class="container">
+                  <div class="intro__wrapper">
+                    <h1 class="title title--h1 title--white">New Wave Art Gallery</h1>
+                    <div class="intro__description">
+                      <p>Dive into the art with us.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="slider">
+                  <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <picture>
+                          <source media="(max-width: 1023px)" type="image/webp" srcset="img/slides/slide-mobile-1.webp, img/slides/slide-mobile-1@2x.webp 2x">
+                          <source type="image/webp" srcset="img/slides/slide-desktop-1.webp, img/slides/slide-desktop-1@2x.webp 2x"><img src="img/slides/slide-desktop-1.jpg" srcset="img/slides/slide-desktop-1@2x.jpg 2x" width="1512" height="754" alt="Slide.">
+                        </picture>
+                      </div>
+                      <div class="swiper-slide">
+                        <picture>
+                          <source media="(max-width: 1023px)" type="image/webp" srcset="img/slides/slide-mobile-2.webp, img/slides/slide-mobile-2@2x.webp 2x">
+                          <source type="image/webp" srcset="img/slides/slide-desktop-2.webp, img/slides/slide-desktop-2@2x.webp 2x"><img src="img/slides/slide-desktop-2.jpg" srcset="img/slides/slide-desktop-2@2x.jpg 2x" width="1512" height="754" alt="Slide.">
+                        </picture>
+                      </div>
+                      <div class="swiper-slide">
+                        <picture>
+                          <source media="(max-width: 1023px)" type="image/webp" srcset="img/slides/slide-mobile-3.webp, img/slides/slide-mobile-3@2x.webp 2x">
+                          <source type="image/webp" srcset="img/slides/slide-desktop-3.webp, img/slides/slide-desktop-3@2x.webp 2x"><img src="img/slides/slide-desktop-3.jpg" srcset="img/slides/slide-desktop-3@2x.jpg 2x" width="1512" height="754" alt="Slide.">
+                        </picture>
+                      </div>
+                      <div class="swiper-slide">
+                        <picture>
+                          <source media="(max-width: 1023px)" type="image/webp" srcset="img/slides/slide-mobile-4.webp, img/slides/slide-mobile-4@2x.webp 2x">
+                          <source type="image/webp" srcset="img/slides/slide-desktop-4.webp, img/slides/slide-desktop-4@2x.webp 2x"><img src="img/slides/slide-desktop-4.jpg" srcset="img/slides/slide-desktop-4@2x.jpg 2x" width="1512" height="754" alt="Slide.">
+                        </picture>
+                      </div>
+                      <div class="swiper-slide">
+                        <picture>
+                          <source media="(max-width: 1023px)" type="image/webp" srcset="img/slides/slide-mobile-5.webp, img/slides/slide-mobile-5@2x.webp 2x">
+                          <source type="image/webp" srcset="img/slides/slide-desktop-5.webp, img/slides/slide-desktop-5@2x.webp 2x"><img src="img/slides/slide-desktop-5.jpg" srcset="img/slides/slide-desktop-5@2x.jpg 2x" width="1512" height="754" alt="Slide.">
+                        </picture>
+                      </div>
+                      <div class="swiper-slide">
+                        <picture>
+                          <source media="(max-width: 1023px)" type="image/webp" srcset="img/slides/slide-mobile-6.webp, img/slides/slide-mobile-6@2x.webp 2x">
+                          <source type="image/webp" srcset="img/slides/slide-desktop-6.webp, img/slides/slide-desktop-6@2x.webp 2x"><img src="img/slides/slide-desktop-6.jpg" srcset="img/slides/slide-desktop-6@2x.jpg 2x" width="1512" height="754" alt="Slide.">
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </section>
+          <section class="page-section page-section--sticky-block" data-section-animation="sticky-section" data-start="top bottom" data-end="center bottom">
+            <div class="page-section__animation" data-animation-direction="from" data-animation="yPercent: 30">
+              <div class="block-with-sticky" id="about">
+                <div class="container">
+                  <div class="moving-sticky-block">
+                    <h2 class="title title--h2 title--violet moving-sticky-block__title">We are thrilled!</h2>
+                    <div class="moving-sticky-block__wrapper">
+                      <p>We&nbsp;are thrilled to&nbsp;announce the opening of&nbsp;our new art gallery, dedicated exclusively&nbsp;to showcasing contemporary art. Our gallery aims to&nbsp;provide a&nbsp;platform for emerging artists from around the world&nbsp;to exhibit their work and engage with&nbsp;a global audience.</p>
+                      <div class="moving-sticky-block__img-box">
+                        <picture>
+                          <source type="image/webp" srcset="img/content/gallery-hall.webp, img/content/gallery-hall@2x.webp 2x"><img src="img/content/gallery-hall.png" srcset="img/content/gallery-hall@2x.png 2x" width="757" height="479" alt="Gallery-hall.">
+                        </picture>
+                      </div>
+                      <p>At&nbsp;our gallery, visitors can expect&nbsp;to see&nbsp;a diverse&nbsp;range of&nbsp;mediums including painting, sculpture, installation art, digital art, and more. We&nbsp;will be&nbsp;featuring both solo and group exhibitions, ensuring that each&nbsp;visit to&nbsp;our gallery&nbsp;is&nbsp;a&nbsp;unique and exciting experience.</p>
+                    </div>
+                  </div>
+                  <div class="sticky-block" data-block="sticky-block">
+                    <div class="sticky-block__inner" data-block-inner="sticky-inner">
+                      <picture>
+                        <source type="image/webp" srcset="img/content/praewthida.webp, img/content/praewthida@2x.webp 2x"><img src="img/content/praewthida.png" srcset="img/content/praewthida@2x.png 2x" width="444" height="523" alt="Gallery-hall.">
+                      </picture>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="page-section" data-section-animation data-start="top bottom" data-end="center bottom">
+            <div class="page-section__animation" data-animation-direction="from" data-animation="opacity: 0">
+              <div class="art">
+                <div class="container">
+                  <figure class="art__wrapper" data-animate-img="parallax">
+                    <picture>
+                      <source type="image/webp" srcset="img/content/michael-kors-dreamland.webp, img/content/michael-kors-dreamland@2x.webp 2x"><img src="img/content/michael-kors-dreamland.jpg" srcset="img/content/michael-kors-dreamland@2x.jpg 2x" width="1312" height="753" alt="“Dreamland” Michael Kors, 2019.">
+                    </picture>
+                    <figcaption>“Dreamland” Michael Kors, 2019</figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="page-section page-section--small-padding" data-section-animation data-start="top bottom" data-end="center bottom">
+            <div class="page-section__animation" data-animation-direction="from" data-animation="">
+              <div class="exhibitions" id="exhibitions" data-section="exhibitions">
+                <div class="container">
+                  <div class="exhibitions__scroll" data-section="horizontal" data-start="top top" data-hidden-end>
+                    <div class="exhibitions__sticky" data-section="sticky">
+                      <h2 class="title title--h2 title--violet exhibitions__title">Current exhibitions</h2>
+                      <div class="exhibitions__content" data-section="content">
+                        <div class="inner-slider exhibitions__slider">
+                          <div class="inner-slider__toggles">
+                            <button class="btn btn--with-icon inner-slider__toggle inner-slider__toggle--previous" type="button">
+                              <svg width="62" height="16" aria-hidden="true">
+                                <use xlink:href="img/stack.svg#swiper-arrow"></use>
+                              </svg>
+                            </button>
+                            <button class="btn btn--with-icon inner-slider__toggle inner-slider__toggle--next" type="button">
+                              <svg width="62" height="16" aria-hidden="true">
+                                <use xlink:href="img/stack.svg#swiper-arrow"></use>
+                              </svg>
+                            </button>
+                          </div>
+                          <div class="inner-slider__swiper" data-swiper="swiper">
+                            <div class="inner-slider__wrapper" data-swiper="wrapper"><a class="inner-slide" href="#" data-swiper="slide">
+                                <div class="inner-slide__image">
+                                  <picture>
+                                    <source type="image/webp" srcset="img/content/exhibition-1.webp, img/content/exhibition-1@2x.webp 2x"><img src="img/content/exhibition-1.jpg" srcset="img/content/exhibition-1@2x.jpg 2x" width="424" height="297" alt="Exhibition by&amp;nbsp;Kamilla Crow.">
+                                  </picture>
+                                </div>
+                                <div class="inner-slide__content">
+                                  <h3 class="title title--h3 title--black inner-slide__title">&ldquo;Letters speak from my&nbsp;soul&rdquo; Kamilla Crow</h3>
+                                  <p class="inner-slide__time">
+                                    <time datetime="2023-08-18">18.08.23</time> - 
+                                    <time datetime="2023-12-25">25.12.23</time>
+                                  </p>
+                                </div></a><a class="inner-slide" href="#" data-swiper="slide">
+                                <div class="inner-slide__image">
+                                  <picture>
+                                    <source type="image/webp" srcset="img/content/exhibition-2.webp, img/content/exhibition-2@2x.webp 2x"><img src="img/content/exhibition-2.jpg" srcset="img/content/exhibition-2@2x.jpg 2x" width="424" height="297" alt="Exhibition by&amp;nbsp;Nick van Groobin.">
+                                  </picture>
+                                </div>
+                                <div class="inner-slide__content">
+                                  <h3 class="title title--h3 title--black inner-slide__title">&ldquo;Orange Amsterdam&rdquo; Nick van Groobin</h3>
+                                  <p class="inner-slide__time">
+                                    <time datetime="2023-09-23">23.09.23</time> - 
+                                    <time datetime="2024-05-25">25.05.24</time>
+                                  </p>
+                                </div></a><a class="inner-slide" href="#" data-swiper="slide">
+                                <div class="inner-slide__image">
+                                  <picture>
+                                    <source type="image/webp" srcset="img/content/exhibition-3.webp, img/content/exhibition-3@2x.webp 2x"><img src="img/content/exhibition-3.jpg" srcset="img/content/exhibition-3@2x.jpg 2x" width="424" height="297" alt="Exhibition by&amp;nbsp;Michael Kors.">
+                                  </picture>
+                                </div>
+                                <div class="inner-slide__content">
+                                  <h3 class="title title--h3 title--black inner-slide__title">&ldquo;Colorfull nightmares&rdquo; Michael Kors</h3>
+                                  <p class="inner-slide__time">
+                                    <time datetime="2023-09-30">30.09.23</time> - 
+                                    <time datetime="2023-11-10">10.11.23</time>
+                                  </p>
+                                </div></a><a class="inner-slide" href="#" data-swiper="slide">
+                                <div class="inner-slide__image">
+                                  <picture>
+                                    <source type="image/webp" srcset="img/content/exhibition-4.webp, img/content/exhibition-4@2x.webp 2x"><img src="img/content/exhibition-4.jpg" srcset="img/content/exhibition-4@2x.jpg 2x" width="424" height="297" alt="Exhibition by&amp;nbsp;Larry O&amp;rsquo;Brain.">
+                                  </picture>
+                                </div>
+                                <div class="inner-slide__content">
+                                  <h3 class="title title--h3 title--black inner-slide__title">&ldquo;Heaven gates&rdquo; Larry O&rsquo;Brain</h3>
+                                  <p class="inner-slide__time">
+                                    <time datetime="2023-09-10">10.09.23</time> - 
+                                    <time datetime="2023-10-13">13.10.23</time>
+                                  </p>
+                                </div></a><a class="inner-slide" href="#" data-swiper="slide">
+                                <div class="inner-slide__image">
+                                  <picture>
+                                    <source type="image/webp" srcset="img/content/exhibition-5.webp, img/content/exhibition-5@2x.webp 2x"><img src="img/content/exhibition-5.jpg" srcset="img/content/exhibition-5@2x.jpg 2x" width="424" height="297" alt="Exhibition by&amp;nbsp;Marie Eir.">
+                                  </picture>
+                                </div>
+                                <div class="inner-slide__content">
+                                  <h3 class="title title--h3 title--black inner-slide__title">&ldquo;Memories from last summer&rdquo; Marie Eir</h3>
+                                  <p class="inner-slide__time">
+                                    <time datetime="2023-09-23">23.09.23</time> - 
+                                    <time datetime="2024-05-25">25.05.24</time>
+                                  </p>
+                                </div></a><a class="inner-slide" href="#" data-swiper="slide">
+                                <div class="inner-slide__image">
+                                  <picture>
+                                    <source type="image/webp" srcset="img/content/exhibition-6.webp, img/content/exhibition-6@2x.webp 2x"><img src="img/content/exhibition-6.jpg" srcset="img/content/exhibition-6@2x.jpg 2x" width="424" height="297" alt="Exhibition by&amp;nbsp;James Makavel.">
+                                  </picture>
+                                </div>
+                                <div class="inner-slide__content">
+                                  <h3 class="title title--h3 title--black inner-slide__title">&ldquo;No&nbsp;way&rdquo; James Makavel</h3>
+                                  <p class="inner-slide__time">
+                                    <time datetime="2023-09-30">30.09.23</time> - 
+                                    <time datetime="2023-11-10">10.11.23</time>
+                                  </p>
+                                </div></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="page-section" data-section-animation data-start="top bottom" data-end="center bottom">
+            <div class="page-section__animation" data-animation-direction="from" data-animation="yPercent: 30">
+              <div class="pure-art">
+                <div class="container">
+                  <div class="image-card" data-image-card>
+                    <div class="image-card__image">
+                      <picture>
+                        <source type="image/webp" srcset="img/content/pure-art.webp, img/content/pure-art@2x.webp 2x"><img src="img/content/pure-art.jpg" srcset="img/content/pure-art@2x.jpg 2x" width="1312" height="1254" alt="Not &amp;ldquo;just&amp;rdquo; art, pure art.">
+                      </picture>
+                    </div>
+                    <div class="image-card__content">
+                      <p class="image-card__text image-card__text--highlighted">Not &ldquo;just&rdquo; art</p>
+                      <p class="image-card__text" data-image-card="text">pure art</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="page-section page-section--sticky-block" data-section-animation="sticky-section" data-start="top bottom" data-end="center bottom">
+            <div class="page-section__animation" data-animation-direction="from" data-animation="yPercent: 30">
+              <div class="block-with-sticky block-with-sticky--left-img" id="about">
+                <div class="container">
+                  <div class="sticky-block" data-block="sticky-block">
+                    <div class="sticky-block__inner" data-block-inner="sticky-inner">
+                      <picture>
+                        <source type="image/webp" srcset="img/content/anastassiya-redko.webp, img/content/anastassiya-redko@2x.webp 2x"><img src="img/content/anastassiya-redko.png" srcset="img/content/anastassiya-redko@2x.png 2x" width="539" height="650" alt="Image by Anastassiya Redko">
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="moving-sticky-block moving-sticky-block--right">
+                    <h2 class="title title--h2 title--violet moving-sticky-block__title">We choose wisely</h2>
+                    <div class="moving-sticky-block__wrapper">
+                      <p>Our team of&nbsp;curators are passionate about contemporary art and are committed&nbsp;to discovering and promoting new talents. They carefully select artists based on&nbsp;their creative vision, originality, and the relevance of&nbsp;their work to&nbsp;current artistic and cultural trends.</p>
+                      <div class="moving-sticky-block__img-box">
+                        <picture>
+                          <source type="image/webp" srcset="img/content/mike-von.webp, img/content/mike-von@2x.webp 2x"><img src="img/content/mike-von.png" srcset="img/content/mike-von@2x.png 2x" width="721" height="440" alt="Image by Mike Von.">
+                        </picture>
+                      </div>
+                      <p>We&nbsp;believe that art has the power&nbsp;to inspire, challenge, and transform the way we&nbsp;see the world. Through our exhibitions and events,&nbsp;we hope&nbsp;to create a&nbsp;space where artists and art lovers can connect, share ideas, and broaden their perspectives.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="page-section" data-section-animation data-start="top bottom" data-end="center bottom">
+            <div class="page-section__animation" data-animation-direction="from" data-animation="yPercent: 30">
+              <div class="feel-art">
+                <div class="container">
+                  <h2 class="title title--h2 title--violet">Feel the art</h2>
+                  <div class="feel-art__wrapper" data-parallax-art>
+                    <div class="feel-art__parallax-bg">
+                      <picture>
+                        <source type="image/webp" srcset="img/content/feel-art.webp, img/content/feel-art@2x.webp 2x"><img src="img/content/feel-art.jpg" srcset="img/content/feel-art@2x.jpg 2x" width="1312" height="824" alt="Feel the art.">
+                      </picture>
+                    </div>
+                    <div class="feel-art__parallax" data-parallax-mouse data-movement="14">
+                      <picture>
+                        <source type="image/webp" srcset="img/content/feel-art-light.webp, img/content/feel-art-light@2x.webp 2x"><img src="img/content/feel-art-light.png" srcset="img/content/feel-art-light@2x.png 2x" width="1230" height="776" alt="Light.">
+                      </picture>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="page-section" data-section-animation="flying-pictures" data-start="top bottom" data-end="center bottom">
+            <div class="page-section__animation" data-animation-direction="from" data-animation="opacity: 0">
+              <div class="flying-pictures">
+                <div class="container">
+                  <div class="flying-pictures__img-wrapper">
+                    <div class="flying-pictures__img-bg">
+                      <picture>
+                        <source type="image/webp" srcset="img/content/background-bench.webp, img/content/background-bench@2x.webp 2x"><img src="img/content/background-bench.png" srcset="img/content/background-bench@2x.png 2x" width="1312" height="694" alt="Hall with a bench.">
+                      </picture>
+                    </div>
+                    <div class="flying-pictures__img flying-pictures__img--palm palm" data-animation="palm">
+                      <picture>
+                        <source type="image/webp" srcset="img/content/palm.webp, img/content/palm@2x.webp 2x"><img src="img/content/palm.png" srcset="img/content/palm@2x.png 2x" width="265" height="353" alt="Palm.">
+                      </picture>
+                    </div>
+                    <div class="flying-pictures__img flying-pictures__img--bust bust" data-animation="bust">
+                      <picture>
+                        <source type="image/webp" srcset="img/content/bust.webp, img/content/bust@2x.webp 2x"><img src="img/content/bust.png" srcset="img/content/bust@2x.png 2x" width="424" height="565" alt="Bust.">
+                      </picture>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="page-section" data-section-animation data-start="top bottom" data-end="center bottom">
+            <div class="page-section__animation" data-animation-direction="from" data-animation="yPercent: 30">
+              <section class="map" id="visit-us">
+                <div class="container">
+                  <h2 class="title map__title title--h2 title--violet">Visit us</h2>
+                  <div class="map__text">
+                    <p>
+                      We invite you to join us on this exciting journey as
+                      <span>we celebrate the beauty and diversity of contemporary art.</span>
+                      Visit us at our new gallery and experience the power of art for yourself.
+                    </p>
+                  </div>
+                  <div id="map"></div>
+                </div>
+              </section>
+            </div>
+          </section>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__wrapper">
+            <div class="footer__location">
+              <p class="footer__location-text">Helsinki, Finland</p>
+              <p class="footer__location-title">New Wave Art Gallery</p>
+            </div>
+            <div class="footer__social">
+              <p class="footer__social-text">Follow us:</p>
+              <ul class="social">
+                <li class="social__item"><a class="social__link" href="#" target="_blank" rel="nofollow noopener" aria-label="Переход на instagram.">
+                    <svg width="48" height="48" aria-hidden="true">
+                      <use xlink:href="img/stack.svg#instagram"></use>
+                    </svg></a></li>
+                <li class="social__item"><a class="social__link" href="#" target="_blank" rel="nofollow noopener" aria-label="Переход на facebook.">
+                    <svg width="48" height="48" aria-hidden="true">
+                      <use xlink:href="img/stack.svg#facebook"></use>
+                    </svg></a></li>
+                <li class="social__item"><a class="social__link" href="#" target="_blank" rel="nofollow noopener" aria-label="Переход на twitter.">
+                    <svg width="48" height="48" aria-hidden="true">
+                      <use xlink:href="img/stack.svg#twitter"></use>
+                    </svg></a></li>
+                <li class="social__item"><a class="social__link" href="#" target="_blank" rel="nofollow noopener" aria-label="Переход на pajamas_podcast.">
+                    <svg width="48" height="48" aria-hidden="true">
+                      <use xlink:href="img/stack.svg#pajamas_podcast"></use>
+                    </svg></a></li>
+              </ul>
+            </div>
+            <div class="footer__copyright"><small class="footer__copyright-text">All rights reserved, 2023</small>
+              <div class="footer__copyright-inner"><small class="footer__copyright-text">Design by Nelly Dernova</small><a class="footer__copyright-text footer__copyright-text--link" href="https://ligaa.agency" target="_blank" rel="nofollow noopener" aria-label="Переход на страницу Лига А">Made in Liga A</a></div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=fa127771-798e-4352-9363-c434c8e98ed1&amp;lang=ru_RU" type="text/javascript"></script>
+    <script src="js/vendor.min.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

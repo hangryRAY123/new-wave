@@ -1,0 +1,5 @@
+mixin title(options = {})
+  - const tag = options.tag || 'p';
+  - const text = options.text || '';
+
+  #{tag}.title()&attributes(attributes)!= text

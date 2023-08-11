@@ -1,0 +1,274 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "UI-kit"
+
+block main
+  style.
+    main {
+      margin-top: 100px;
+    }
+
+    main > .container {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+
+    .components-backwards {
+      color: #ffffff;
+      display: inline-block;
+    }
+
+    .components-backwards span:first-child {
+      position: relative;
+      top: -3px;
+
+      display: inline-block;
+      margin-right: 15px;
+
+      font-size: 16px;
+      line-height: 24px;
+      vertical-align: top;
+
+      transform: scale(2);
+    }
+
+    .components-backwards span:last-child {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    .components-backwards + h1 {
+      margin-bottom: 0;
+    }
+
+    .container > section {
+      padding: 70px 0 0 0;
+    }
+
+    section > h2 {
+      margin: 0 0 20px 0;
+      padding: 20px 0;
+      position: relative;
+      color: #ffffff;
+    }
+
+    section > h2::before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100vw;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+      background-color: #2c39f2;
+      z-index: -1;
+    }
+
+    .header-ui {
+      background-color: #2c39f2;
+      padding: 20px 0;
+      position: fixed;
+      width: 100vw;
+      z-index: 99;
+      box-shadow: 0 0 3px 1px #000000;
+    }
+
+    .header-ui__nav {
+      display: grid;
+      grid-template-columns: max-content 1fr;
+      gap: 20px 80px;
+    }
+
+    .header-ui__inner-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 30px;
+    }
+
+    .header-ui__inner-link {
+      color: #ffffff;
+      transition: color 0.3s ease;
+    }
+
+    .header-ui__inner-link:hover,
+    .header-ui__inner-link.is-active {
+      color: #ff1553;
+    }
+
+    .header-ui__inner-link.is-inactive {
+      color: #ffffff;
+      pointer-events: none;
+    }
+
+    .btn {
+      margin: 10px 0;
+    }
+
+    .wrapper {
+      overflow: hidden;
+    }
+
+  header.header-ui
+    nav.header-ui__nav.container
+      a.components-backwards(href="sitemap.html")
+        span &larr;
+        span вернуться на разводящую
+      ul.header-ui__inner-list
+        li.header-ui__inner-item
+          a.header-ui__inner-link(href="#wrappers", data-navigation-link) Wrappers
+        li.header-ui__inner-item
+          a.header-ui__inner-link(href="#buttons", data-navigation-link) Buttons
+        li.header-ui__inner-item
+          a.header-ui__inner-link(href="#title", data-navigation-link) Title
+        li.header-ui__inner-item
+          a.header-ui__inner-link(href="#inner-slide", data-navigation-link) Inner slide
+        li.header-ui__inner-item
+          a.header-ui__inner-link(href="#image-card", data-navigation-link) Image card
+
+  main
+    .container
+      h1 UI-kit
+
+      section(id="wrappers")
+        h2 Wrappers
+        +page-content()
+          h3 .page-content
+          p Используется, чтобы отделить снизу контентную часть от footer
+        p Пример вызова:
+        code
+          pre   +page-content()
+          pre     // Контентная область
+        +page-section().page-section--no-padding-top
+          h3 .page-section
+          div
+            p Используется для разделения секций в контентной области проекта (добавляет padding-top)
+            p Добавляет анимацию появления блока (opacity: 0.5; &rarr; opacity: 1;)
+        p Пример вызова:
+        code
+          pre   +page-section()
+          pre     // Блок
+          pre   +page-section().page-section--no-padding-top
+          pre     // Блок
+
+      section(id="buttons")
+        h2 Buttons
+        h3 Кнопка type="button"
+        +btn({text: "Button"}).btn--dark-purple
+        p Пример вызова
+        code
+          pre +btn({text: "Button"}).btn--dark-purple
+        h3 Ссылка на внешний ресурс href: "#", isExternal: true
+        +btn({text: "Link", href: "#", isExternal: true}).btn--dark-purple(aria-label="Просто ссылка")
+        p Пример вызова
+        code
+          pre +btn({text: "Link", href: "#", isExternal: true}).btn--dark-purple(aria-label="Просто ссылка")
+        h3 Кнопка type="button" с иконкой
+        +btn().btn--with-icon
+          +icon("swiper-arrow", 62, 16)
+        p Пример вызова
+        code
+          pre +btn().btn--with-icon
+          pre   +icon("swiper-arrow", 62, 16)
+        h3 Кнопка type="button" с атрибутом disabled
+        +btn({text: "Disabled"}).btn--dark-purple(disabled)
+        p Пример вызова
+        code
+          pre +btn({text: "Disabled"}).btn--dark-purple(disabled)
+
+      section(id="title")
+        h2 Title
+        +title({tag: "h1", text: "New Wave Art Gallery"}).title--h1
+        p Пример вызова
+        code
+          pre +title({tag: "h1", text: "New Wave Art Gallery"}).title--h1
+
+        +title({tag: "h3", text: "New Wave Art Gallery"}).title--h3.title--violet
+        p Пример вызова с другим тегом и модификатором цвета
+        code
+          pre +title({tag: "h3", text: "New Wave Art Gallery"}).title--h3.title--violet
+
+        +title({tag: "span", text: "New Wave Art Gallery"}).title--h3.title--black
+        p Пример вызова с другим тегом и модификатором цвета
+        code
+          pre +title({tag: "span", text: "New Wave Art Gallery"}).title--h3.title--black
+
+      section(id="inner-slide")
+        h2 Inner slide
+        p Карточка подстраивается под сетку, базово ширина не задана.
+        +inner-slide({
+          link: "#",
+          img: {
+            path: "content",
+            name: "exhibition-1",
+            format: "jpg",
+            width: "424",
+            height: "297",
+            alt: "Exhibition by&nbsp;Kamilla Crow."
+          },
+          title: "&ldquo;Letters speak from my&nbsp;soul&rdquo;",
+          author: "Kamilla Crow",
+          time: {
+            start: "18.08.23",
+            end: "25.12.23",
+            datetimeStart: "2023-08-18",
+            datetimeEnd: "2023-12-25"
+          }
+        })
+        p Пример вызова
+        code
+          pre +inner-slide({
+          pre   link: "#",
+          pre   img: {
+          pre     path: "content",
+          pre     name: "exhibition-1",
+          pre     format: "jpg",
+          pre     width: "424",
+          pre     height: "297",
+          pre     alt: "Exhibition by Kamilla Crow."
+          pre   },
+          pre   title: "&laquo;Letters speak from my&nbsp;soul&raquo;",
+          pre   author: "Kamilla Crow",
+          pre   time: {
+          pre     start: "18.08.23",
+          pre     end: "25.12.23",
+          pre     datetimeStart: "2023-08-18",
+          pre     datetimeEnd: "2023-12-25"
+          pre   }
+          pre })
+
+      section(id="image-card")
+        h2 Image card
+        p Карточка подстраивается под сетку, базово ширина не задана.
+        +image-card({
+          img: {
+            path: "content",
+            name: "pure-art",
+            format: "jpg",
+            width: "1312",
+            height: "1254",
+            alt: "Not &ldquo;just&rdquo; art, pure art."
+          },
+          highlightedText: "Not &ldquo;just&rdquo; art",
+          splittingText: "pure art"
+        })
+        p Пример вызова
+        code
+          pre +image-card({
+          pre   img: {
+          pre     path: "content",
+          pre     name: "pure-art",
+          pre     format: "jpg",
+          pre     width: "1312",
+          pre     height: "1254",
+          pre     alt: "Not &ldquo;just&rdquo; art, pure art."
+          pre   },
+          pre   highlightedText: "Not &ldquo;just&rdquo; art",
+          pre   splittingText: "pure art"
+          pre })
+
+  script
+    include ../../js/inline/ui-kit.js

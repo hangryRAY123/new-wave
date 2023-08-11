@@ -1,0 +1,129 @@
+.footer {
+  background-color: rgba(133, 24, 107, 0.8);
+  color: $color-default-white;
+  padding-top: size(36px);
+  padding-bottom: size(20px);
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include vp-1023 {
+      flex-direction: column;
+    }
+  }
+
+  &__location {
+    max-width: size(350px);
+
+    @include vp-1023 {
+      margin-bottom: size(50px);
+    }
+  }
+
+  &__location-text {
+    display: block;
+    font-family: $ff-nunito;
+    font-weight: 600;
+    font-size: size(24px);
+    line-height: size(33px);
+    margin-bottom: size(16px);
+    margin-top: 0;
+  }
+
+  &__location-title {
+    font-family: $ff-nunito;
+    font-style: normal;
+    font-size: size(30px);
+    line-height: size(41px);
+    font-weight: 800;
+    margin: 0;
+  }
+
+  &__social {
+    margin-left: auto;
+    margin-right: size(60px);
+    max-width: size(300px);
+
+    @include vp-1023 {
+      margin: 0;
+    }
+  }
+
+  &__social-text {
+    display: block;
+    font-family: $ff-nunito;
+    font-weight: 600;
+    font-size: size(24px);
+    line-height: size(33px);
+    margin-bottom: size(10px);
+    margin-top: 0;
+
+    @include vp-1023 {
+      margin-bottom: size(5px);
+    }
+  }
+
+  &__copyright {
+    flex-basis: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: size(46px);
+
+    @include vp-1023 {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: size(15px);
+    }
+  }
+
+  &__copyright-text {
+    display: block;
+    font-family: $ff-nunito;
+    font-weight: 600;
+    font-size: size(18px);
+    line-height: size(25px);
+    max-width: size(250px);
+    margin-bottom: size(5px);
+
+    &--link {
+      color: $color-default-white;
+      text-decoration: none;
+      transition: $trans-default;
+    }
+
+    &--link:hover,
+    &--link:focus-visible {
+      color: #cccccc;
+    }
+
+    &--link:active {
+      color: $color-default-black;
+    }
+
+    @include vp-1023 {
+      margin-bottom: size(8px);
+    }
+  }
+
+  &__copyright-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-left: auto;
+
+    .footer__copyright-text {
+      text-align: right;
+    }
+
+    @include vp-1023 {
+      order: -1;
+      align-items: flex-start;
+      margin: 0;
+
+      .footer__copyright-text {
+        text-align: left;
+      }
+    }
+  }
+}

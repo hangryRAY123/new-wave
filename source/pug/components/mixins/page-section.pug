@@ -1,0 +1,4 @@
+mixin page-section(animation)
+  section.page-section(data-section-animation, data-start="top bottom", data-end="center bottom")&attributes(attributes)
+    .page-section__animation(data-animation-direction="from", data-animation=animation)
+      block

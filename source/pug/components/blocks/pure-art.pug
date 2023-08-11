@@ -1,0 +1,18 @@
+mixin pure-art()
+  -
+    const data = {
+      img: {
+        path: "content",
+        name: "pure-art",
+        format: "jpg",
+        width: "1312",
+        height: "1254",
+        alt: "Not &ldquo;just&rdquo; art, pure art."
+      },
+      highlightedText: "Not &ldquo;just&rdquo; art",
+      splittingText: "pure art"
+    }
+
+  .pure-art&attributes(attributes)
+    .container
+      +image-card(data)

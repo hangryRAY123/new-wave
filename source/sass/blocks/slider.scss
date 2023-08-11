@@ -1,0 +1,73 @@
+.slider {
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .swiper-pagination-bullet {
+    border-radius: 0;
+    background: $color-default-white;
+    width: size(18px) !important;
+    height: size(18px) !important;
+    opacity: 1;
+    margin: 0 size(6px) !important;
+    transition: $trans-default !important;
+
+    @include hover-focus {
+      background-color: rgba(133, 24, 107, 1);
+    }
+  }
+
+  .swiper-pagination {
+    bottom: size(25px) !important;
+    margin-left: size(3px) !important;
+    width: size(150px) !important;
+
+    @include vp-767 {
+      bottom: size(4px) !important;
+      margin-left: size(3px) !important;
+      margin-right: size(3px) !important;
+      width: size(150px) !important;
+    }
+  }
+
+  .swiper-pagination-bullet-active {
+    transform: scale(1) !important;
+  }
+
+  .swiper-pagination-bullet-active-prev,
+  .swiper-pagination-bullet-active-next {
+    transform: scale(0.7) !important;
+  }
+
+  .swiper-pagination-bullet-active-prev {
+    margin-right: size(6px) !important;
+    margin-left: size(3px) !important;
+
+    @include vp-767 {
+      margin-right: size(6px) !important;
+      margin-left: size(3px) !important;
+    }
+  }
+
+  .swiper-pagination-bullet-active-next {
+    margin-right: size(3px) !important;
+    margin-left: size(8px) !important;
+
+    @include vp-767 {
+      margin-left: size(6px) !important;
+      margin-right: size(3px) !important;
+    }
+  }
+
+  .swiper-pagination-bullet-active-prev-prev,
+  .swiper-pagination-bullet-active-next-next {
+    transform: scale(0.45) !important;
+  }
+}

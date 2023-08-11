@@ -1,0 +1,29 @@
+.block-with-sticky {
+  .container {
+    display: grid;
+    grid-template-columns: 58% auto;
+    gap: size(109px);
+
+    @include vp-1023 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &--left-img .container {
+    grid-template-columns: 41% 55%;
+    gap: size(52px);
+  }
+
+  &--left-img .sticky-block {
+    padding-bottom: 0;
+  }
+
+  &--left-img .sticky-block__inner img {
+    width: size(539px);
+    height: size(650px);
+  }
+}
+
+

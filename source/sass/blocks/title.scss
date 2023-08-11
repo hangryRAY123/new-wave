@@ -1,0 +1,51 @@
+.title {
+  margin: 0;
+  font-family: $ff-space-grotesk;
+  font-style: normal;
+  font-weight: 700;
+
+  &--h1 {
+    font-size: size(110px);
+    line-height: size(110px);
+
+    @include vp-1023 {
+      font-size: size(60px);
+      line-height: size(64px);
+    }
+  }
+
+  &--h2 {
+    font-size: size(70px);
+    line-height: size(89px);
+
+    @include vp-1023 {
+      font-size: size(40px);
+      line-height: size(51px);
+    }
+  }
+
+  &--h3 {
+    font-family: $ff-nunito;
+    font-style: normal;
+    font-size: size(30px);
+    line-height: size(41px);
+    font-weight: 500;
+
+    @include vp-1023 {
+      font-size: size(20px);
+      line-height: size(27px);
+    }
+  }
+
+  &--white {
+    color: $color-default-white;
+  }
+
+  &--black {
+    color: $color-default-black;
+  }
+
+  &--violet {
+    color: $color-kingfisher-daisy;
+  }
+}

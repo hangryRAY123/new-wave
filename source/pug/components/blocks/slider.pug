@@ -1,0 +1,37 @@
+mixin slider()
+  -
+    const slides = [
+      {
+        desktop: "slide-desktop-1",
+        mobile: "slide-mobile-1"
+      },
+      {
+        desktop: "slide-desktop-2",
+        mobile: "slide-mobile-2"
+      },
+      {
+        desktop: "slide-desktop-3",
+        mobile: "slide-mobile-3"
+      },
+      {
+        desktop: "slide-desktop-4",
+        mobile: "slide-mobile-4"
+      },
+      {
+        desktop: "slide-desktop-5",
+        mobile: "slide-mobile-5"
+      },
+      {
+        desktop: "slide-desktop-6",
+        mobile: "slide-mobile-6"
+      }
+    ]
+
+  .slider
+    .swiper.mySwiper
+      .swiper-wrapper
+        each slide in slides
+          .swiper-slide
+            +picture('slides', slide.desktop, 'jpg', '1512', '754', 'Slide.', slide.mobile)
+      .swiper-pagination
+

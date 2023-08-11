@@ -1,0 +1,8 @@
+mixin moving-sticky-block(options = {})
+  .moving-sticky-block&attributes(attributes)
+    +title({tag: "h2", text: options.title}).title--h2.title--violet.moving-sticky-block__title
+    .moving-sticky-block__wrapper
+      p!= options.partText1
+      .moving-sticky-block__img-box
+        +picture("content", options.nameImg, "png", options.widthImg, options.heightImg, options.altImg)
+      p!= options.partText2

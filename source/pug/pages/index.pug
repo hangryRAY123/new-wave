@@ -1,0 +1,44 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "New Wave Art Gallery"
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "index.html"
+  -
+    const animation = {
+      none: "",
+      opacity: "opacity: 0",
+      translateY: "yPercent: 30"
+    }
+
+block main
+  main
+    +page-content()
+      +page-section(animation.none).page-section--no-padding
+        +intro()
+      +page-section(animation.translateY)(data-section-animation="sticky-section").page-section--sticky-block
+        +block-with-sticky({
+          block: "welcome"
+        })
+      +page-section(animation.opacity)
+        +art()
+      +page-section(animation.none).page-section--small-padding
+        +exhibitions()
+      +page-section(animation.translateY)
+        +pure-art()
+      +page-section(animation.translateY)(data-section-animation="sticky-section").page-section--sticky-block
+        +block-with-sticky({
+          block: "team"
+        }).block-with-sticky--left-img
+      +page-section(animation.translateY)
+        +feel-art()
+      +page-section(animation.opacity)(data-section-animation="flying-pictures")
+        +flying-pictures()
+      +page-section(animation.translateY)
+        +map()
+
+block modals

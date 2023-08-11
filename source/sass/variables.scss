@@ -1,0 +1,36 @@
+$color-default-black:               #000000;
+$color-default-white:               #ffffff;
+$color-transparent:                 rgba(255, 255, 255, 0);
+
+$color-hit-pink:                    #ffa169;
+$color-hit-pink-transparent:        rgba(255, 161, 105, 0.8);
+$color-eclipse:                     #3d3333;
+$color-kingfisher-daisy:            #55228b;
+$color-dark-purple:                 #85186b;
+$color-dark-purple-transparent:     rgba(133, 24, 107, 0.8);
+$color-taupe-grey:                  #888387;
+$color-light-grey:                  #d0cbd0;
+$color-biege:                       #dc9e5622;
+$color-gainsboro:                   #d9d9d9;
+$color-medium-violet-red:           #b91a87;
+$color-bgpreloader-pink:            #f32a91;
+$color-waikawa-grey:                #5a739a;
+$color-waikawa-grey-transparent:    rgba(90, 115, 154, 0.8);
+$color-palatinate-purple:           #661252;
+$color-pizazz:                      #f07a33;
+$color-dark-cerulean:               #164793;
+
+$fz-default:                        30px;
+
+$ff-nunito:                         "Nunito", "Arial", sans-serif;
+$ff-space-grotesk:                  "SpaceGrotesk", "Arial", sans-serif;
+
+$tf-default:                        ease;
+$trans-default:                     0.3s $tf-default;
+
+$vp-375:                            375px;
+$vp-768:                            768px;
+$vp-1024:                           1024px;
+$vp-1512:                           1512px;
+
+$z-index-image-card-content:        1;

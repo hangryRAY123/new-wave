@@ -1,0 +1,16 @@
+mixin header(headerMods, currentUrl)
+  header.header(class=headerMods)(data-header="sticky")
+    .container
+      span.header__logo
+        img(src="img/svg/logo.svg", width="91", height="53", alt="Логотип")
+      nav.main-nav
+        .main-nav__wrapper
+          ul.main-nav__list
+            li.main-nav__item
+              a.main-nav__link.main-nav__link--dark-purple(href="#", data-move-to="#about", data-offset="header") About
+            li.main-nav__item
+              a.main-nav__link.main-nav__link--hit-pink(href="#", data-move-to="#exhibitions", data-offset="header") Exhibitions
+            li.main-nav__item
+              a.main-nav__link.main-nav__link--waikawa-grey(href="#", data-move-to="#visit-us", data-offset="header") Visit us
+      button.header__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false", data-burger)
+        +icon("icon-burger", 41, 41)

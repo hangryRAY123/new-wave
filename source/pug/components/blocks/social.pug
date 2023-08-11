@@ -1,0 +1,26 @@
+mixin social()
+  -
+    const social = [
+      {
+        name: "instagram",
+        link: "#"
+      },
+      {
+        name: "facebook",
+        link: "#"
+      },
+      {
+        name: "twitter",
+        link: "#"
+      },
+      {
+        name: "pajamas_podcast",
+        link: "#"
+      }
+    ]
+
+  ul.social
+    each item in social
+      li.social__item
+        a.social__link(href=item.link target="_blank" rel="nofollow noopener" aria-label="Переход на " + item.name + ".")
+          +icon(item.name, 48, 48)

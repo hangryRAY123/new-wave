@@ -1,0 +1,15 @@
+mixin footer(footerMods)
+  footer.footer(class=footerMods)
+    .container
+      .footer__wrapper
+        div.footer__location
+          p.footer__location-text Helsinki, Finland
+          p.footer__location-title New Wave Art Gallery
+        div.footer__social
+          p.footer__social-text Follow us:
+          +social()
+        div.footer__copyright
+          small.footer__copyright-text All rights reserved, 2023
+          div.footer__copyright-inner
+            small.footer__copyright-text Design by Nelly Dernova
+            a.footer__copyright-text.footer__copyright-text--link(href="https://ligaa.agency" target="_blank" rel="nofollow noopener" aria-label="Переход на страницу Лига А") Made in Liga A

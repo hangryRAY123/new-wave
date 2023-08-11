@@ -1,0 +1,11 @@
+mixin inner-slide(data = {})
+  - const {link, img, title, author, time} = data
+  - const {path, name, format, width, height, alt} = img
+  - const {start, end, datetimeStart, datetimeEnd} = time
+
+  a.inner-slide(href=link)&attributes(attributes)
+    .inner-slide__image
+      +picture(path, name, format, width, height, alt)
+    .inner-slide__content
+      +title({tag: "h3", text: `${title} ${author}`}).title--h3.title--black.inner-slide__title
+      p.inner-slide__time #[time(datetime=datetimeStart)!= start] - #[time(datetime=datetimeEnd)!= end]

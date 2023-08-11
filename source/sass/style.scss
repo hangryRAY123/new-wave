@@ -1,0 +1,40 @@
+@import "vendor/normalize";
+
+@import "vendor/swiper";
+@import "vendor/splitting";
+
+@import "variables";
+@import "mixins";
+@import "functions";
+@import "keyframes";
+@import "global/fonts";
+@import "global/reboot";
+@import "global/utils";
+@import "global/container";
+
+@import "blocks/preloader";
+@import "blocks/header";
+@import "blocks/main-nav";
+@import "blocks/footer";
+@import "blocks/btn";
+@import "blocks/custom-input";
+@import "blocks/custom-toggle";
+@import "blocks/input-upload";
+@import "blocks/block-with-stycky";
+@import "blocks/moving-sticky-block";
+@import "blocks/title";
+@import "blocks/exhibitions";
+@import "blocks/sticky-block";
+@import "blocks/flying-pictures";
+@import "blocks/intro";
+@import "blocks/slider";
+@import "blocks/art";
+@import "blocks/image-card";
+@import "blocks/map";
+@import "blocks/page-content";
+@import "blocks/page-section";
+@import "blocks/social";
+@import "blocks/feel-art";
+@import "blocks/inner-slider";
+@import "blocks/inner-slide";
+@import "blocks/horizontal-scroll";

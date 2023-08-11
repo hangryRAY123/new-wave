@@ -1,0 +1,6 @@
+mixin sticky-block(img = {})
+  - const {path, name, format, width, height, alt} = img
+
+  .sticky-block(data-block="sticky-block")
+      .sticky-block__inner(data-block-inner="sticky-inner")
+        +picture(path, name, format, width, height, alt)

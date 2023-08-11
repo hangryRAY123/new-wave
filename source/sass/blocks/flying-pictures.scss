@@ -1,0 +1,94 @@
+.flying-pictures {
+  padding: 0;
+
+  &__img-wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__img-bg img {
+    width: size(1312px);
+    height: size(694px);
+    background-color: $color-taupe-grey;
+    object-fit: cover;
+
+    @include vp-1023 {
+      width: size(333px);
+      height: size(176px);
+    }
+
+    @include vp-767 {
+      width: size(333px);
+      height: size(176px);
+    }
+  }
+
+  &__img {
+    position: absolute;
+
+    &--palm {
+      top: -25.5%;
+      right: 6.8%;
+    }
+
+    &--bust {
+      bottom: -34.8%;
+      left: 8.4%;
+    }
+
+    &--palm img {
+      width: size(265px);
+      height: size(353px);
+      object-fit: cover;
+    }
+
+    &--bust img {
+      width: size(424px);
+      height: size(565px);
+      object-fit: cover;
+    }
+
+    @include vp-1023 {
+      &--palm {
+        top: -18%;
+        right: 9%;
+      }
+
+      &--bust {
+        bottom: -31%;
+        left: 8.4%;
+      }
+
+      &--palm img {
+        width: size(49px);
+        height: size(65px);
+      }
+
+      &--bust img {
+        width: size(96px);
+        height: size(128px);
+      }
+    }
+
+    @include vp-767 {
+      &--palm {
+        top: -17%;
+        right: 9%;
+      }
+
+      &--bust {
+        left: 13%;
+      }
+
+      &--palm img {
+        width: size(49px);
+        height: size(65px);
+      }
+
+      &--bust img {
+        width: size(96px);
+        height: size(128px);
+      }
+    }
+  }
+}

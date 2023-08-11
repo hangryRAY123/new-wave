@@ -1,0 +1,9 @@
+mixin feel-art()
+  .feel-art
+    .container
+      +title({tag: 'h2', text: 'Feel the art'}).title--h2.title--violet
+      .feel-art__wrapper(data-parallax-art)
+        .feel-art__parallax-bg
+          +picture('content', 'feel-art', 'jpg', '1312', '824', 'Feel the art.')
+        .feel-art__parallax(data-parallax-mouse, data-movement='14')
+          +picture('content', 'feel-art-light', 'png', '1230', '776', 'Light.')

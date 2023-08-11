@@ -1,0 +1,11 @@
+mixin inner-slider(slides = [])
+  .inner-slider&attributes(attributes)
+    .inner-slider__toggles
+      +btn().btn--with-icon.inner-slider__toggle.inner-slider__toggle--previous
+        +icon("swiper-arrow", 62, 16)
+      +btn().btn--with-icon.inner-slider__toggle.inner-slider__toggle--next
+        +icon("swiper-arrow", 62, 16)
+    .inner-slider__swiper(data-swiper="swiper")
+      .inner-slider__wrapper(data-swiper="wrapper")
+        each slide in slides
+          +inner-slide(slide)(data-swiper="slide")

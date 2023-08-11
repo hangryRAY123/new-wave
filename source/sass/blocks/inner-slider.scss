@@ -1,0 +1,42 @@
+.inner-slider {
+  &__wrapper {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(6, minmax(size(334px), size(424px)));
+    grid-template-rows: 1fr;
+    column-gap: size(20px);
+
+    @include vp-1023 {
+      display: flex;
+      grid-auto-flow: row;
+      grid-template-columns: none;
+      grid-template-rows: none;
+      column-gap: normal;
+    }
+  }
+
+  &__toggles {
+    display: none;
+
+    @include vp-1023 {
+      display: grid;
+      grid-template-columns: repeat(2, size(62px));
+      justify-content: end;
+      column-gap: size(34px);
+      margin: 0 0 size(12px);
+    }
+  }
+
+  &__toggle {
+    width: size(62px);
+    height: size(16px);
+
+    &--disabled {
+      color: $color-taupe-grey;
+    }
+
+    &--previous svg {
+      transform: rotate(180deg);
+    }
+  }
+}

@@ -1,0 +1,145 @@
+.main-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include vp-1023 {
+    transition: .3s;
+    transition-property: transform;
+    transform: translateY(-100%);
+    background-color: $color-default-white;
+    bottom: 0;
+    display: flex;
+    left: 0;
+    opacity: 0;
+    margin: 0;
+    padding: size(83px) size(20px) size(20px);
+    position: fixed;
+    pointer-events: none;
+    top: 0;
+    transition: all .3s ease;
+    right: 0;
+    visibility: hidden;
+    z-index: 3;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: auto;
+  }
+
+  &__wrapper {
+    @include vp-1023 {
+      height: 100vh;
+      padding-top: size(60px);
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    align-items: center;
+    padding-top: size(7px);
+
+    @include vp-1023 {
+      background-color: $color-default-white;
+      justify-content: center;
+      align-content: center;
+      flex-direction: column;
+      padding: 0;
+    }
+  }
+
+  &__item {
+    margin-bottom: size(10px);
+    margin-right: size(20px);
+
+    @include vp-1023 {
+      margin-bottom: size(40px);
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    width: size(201px);
+    font: {
+      size: size(14px);
+      weight: 800;
+    }
+    line-height: size(19px);
+    color: $color-default-white;
+    border: size(2px) solid $color-default-white;
+    border-radius: size(5px);
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: size(7px) size(18px);
+    transition: .3s;
+    transition-property: background-color;
+
+    &--dark-purple {
+      background-color: $color-dark-purple-transparent;
+
+      @include hover {
+        background-color: $color-dark-purple;
+      }
+
+      &:active {
+        background-color: $color-palatinate-purple;
+      }
+    }
+
+    &--hit-pink {
+      background-color: $color-hit-pink-transparent;
+
+      @include hover {
+        background-color: $color-hit-pink;
+      }
+
+      &:active {
+        background-color: $color-pizazz;
+      }
+    }
+
+    &--waikawa-grey {
+      background-color: $color-waikawa-grey-transparent;
+
+      @include hover {
+        background-color: $color-waikawa-grey;
+      }
+
+      &:active {
+        background-color: $color-dark-cerulean;
+      }
+    }
+
+    &.is-active {
+      opacity: 0.6;
+    }
+  }
+
+  // &__toggle {
+  //   display: none;
+  //   border: none;
+  //   background-color: transparent;
+  //   padding: 0;
+
+  //   svg {
+  //     width: size(41px);
+  //     height: size(41px);
+  //   }
+
+  //   @include vp-1023 {
+  //     display: block;
+  //     cursor: pointer;
+  //     position: absolute;
+  //     top: size(20px);
+  //     right: size(20px);
+  //   }
+  // }
+}

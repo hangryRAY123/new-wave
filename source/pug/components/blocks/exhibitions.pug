@@ -1,0 +1,126 @@
+mixin exhibitions()
+  -
+    const slides = [
+      {
+        link: "#",
+        img: {
+          path: "content",
+          name: "exhibition-1",
+          format: "jpg",
+          width: "424",
+          height: "297",
+          alt: "Exhibition by&nbsp;Kamilla Crow."
+        },
+        title: "&ldquo;Letters speak from my&nbsp;soul&rdquo;",
+        author: "Kamilla Crow",
+        time: {
+          start: "18.08.23",
+          end: "25.12.23",
+          datetimeStart: "2023-08-18",
+          datetimeEnd: "2023-12-25"
+        }
+      },
+      {
+        link: "#",
+        img: {
+          path: "content",
+          name: "exhibition-2",
+          format: "jpg",
+          width: "424",
+          height: "297",
+          alt: "Exhibition by&nbsp;Nick van Groobin."
+        },
+        title: "&ldquo;Orange Amsterdam&rdquo;",
+        author: "Nick van Groobin",
+        time: {
+          start: "23.09.23",
+          end: "25.05.24",
+          datetimeStart: "2023-09-23",
+          datetimeEnd: "2024-05-25"
+        }
+      },
+      {
+        link: "#",
+        img: {
+          path: "content",
+          name: "exhibition-3",
+          format: "jpg",
+          width: "424",
+          height: "297",
+          alt: "Exhibition by&nbsp;Michael Kors."
+        },
+        title: "&ldquo;Colorfull nightmares&rdquo;",
+        author: "Michael Kors",
+        time: {
+          start: "30.09.23",
+          end: "10.11.23",
+          datetimeStart: "2023-09-30",
+          datetimeEnd: "2023-11-10"
+        }
+      },
+      {
+        link: "#",
+        img: {
+          path: "content",
+          name: "exhibition-4",
+          format: "jpg",
+          width: "424",
+          height: "297",
+          alt: "Exhibition by&nbsp;Larry O&rsquo;Brain."
+        },
+        title: "&ldquo;Heaven gates&rdquo;",
+        author: "Larry O&rsquo;Brain",
+        time: {
+          start: "10.09.23",
+          end: "13.10.23",
+          datetimeStart: "2023-09-10",
+          datetimeEnd: "2023-10-13"
+        }
+      },
+      {
+        link: "#",
+        img: {
+          path: "content",
+          name: "exhibition-5",
+          format: "jpg",
+          width: "424",
+          height: "297",
+          alt: "Exhibition by&nbsp;Marie Eir."
+        },
+        title: "&ldquo;Memories from last summer&rdquo;",
+        author: "Marie Eir",
+        time: {
+          start: "23.09.23",
+          end: "25.05.24",
+          datetimeStart: "2023-09-23",
+          datetimeEnd: "2024-05-25"
+        }
+      },
+      {
+        link: "#",
+        img: {
+          path: "content",
+          name: "exhibition-6",
+          format: "jpg",
+          width: "424",
+          height: "297",
+          alt: "Exhibition by&nbsp;James Makavel."
+        },
+        title: "&ldquo;No&nbsp;way&rdquo;",
+        author: "James Makavel",
+        time: {
+          start: "30.09.23",
+          end: "10.11.23",
+          datetimeStart: "2023-09-30",
+          datetimeEnd: "2023-11-10"
+        }
+      }
+    ]
+
+  .exhibitions#exhibitions(data-section="exhibitions")&attributes(attributes)
+    .container
+      .exhibitions__scroll(data-section="horizontal", data-start="top top", data-hidden-end)
+        .exhibitions__sticky(data-section="sticky")
+          +title({tag: "h2", text: "Current exhibitions"}).title--h2.title--violet.exhibitions__title
+          .exhibitions__content(data-section="content")
+            +inner-slider(slides).exhibitions__slider

@@ -1,0 +1,47 @@
+mixin block-with-sticky(blocks = {})
+  -
+    const data = {
+      img1: {
+        path: "content",
+        name: "praewthida",
+        format: "png",
+        width: "444",
+        height: "523",
+        alt: "Gallery-hall."
+      },
+      img2: {
+        path: "content",
+        name: "anastassiya-redko",
+        format: "png",
+        width: "539",
+        height: "650",
+        alt: "Image by Anastassiya Redko"
+      }
+    }
+
+  .block-with-sticky&attributes(attributes)#about
+    .container
+      if blocks.block === "welcome"
+        +moving-sticky-block({
+          title: "We are thrilled!",
+          nameImg: "gallery-hall",
+          widthImg: "757",
+          heightImg: "479",
+          altImg: "Gallery-hall.",
+          partText1: 'We&nbsp;are thrilled to&nbsp;announce the opening of&nbsp;our new art gallery, dedicated exclusively&nbsp;to showcasing contemporary art. Our gallery aims to&nbsp;provide a&nbsp;platform for emerging artists from around the world&nbsp;to exhibit their work and engage with&nbsp;a global audience.',
+          partText2: 'At&nbsp;our gallery, visitors can expect&nbsp;to see&nbsp;a diverse&nbsp;range of&nbsp;mediums including painting, sculpture, installation art, digital art, and more. We&nbsp;will be&nbsp;featuring both solo and group exhibitions, ensuring that each&nbsp;visit to&nbsp;our gallery&nbsp;is&nbsp;a&nbsp;unique and exciting experience.'
+        })
+        +sticky-block(data.img1)
+      else if blocks.block === "team"
+        +sticky-block(data.img2)
+        +moving-sticky-block({
+          title: "We choose wisely",
+          nameImg: "mike-von",
+          widthImg: "721",
+          heightImg: "440",
+          altImg: "Image by Mike Von.",
+          partText1: "Our team of&nbsp;curators are passionate about contemporary art and are committed&nbsp;to discovering and promoting new talents. They carefully select artists based on&nbsp;their creative vision, originality, and the relevance of&nbsp;their work to&nbsp;current artistic and cultural trends.",
+          partText2: "We&nbsp;believe that art has the power&nbsp;to inspire, challenge, and transform the way we&nbsp;see the world. Through our exhibitions and events,&nbsp;we hope&nbsp;to create a&nbsp;space where artists and art lovers can connect, share ideas, and broaden their perspectives."
+        }).moving-sticky-block--right
+
+

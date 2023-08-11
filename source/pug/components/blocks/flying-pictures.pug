@@ -1,0 +1,10 @@
+mixin flying-pictures()
+  .flying-pictures
+    .container
+      .flying-pictures__img-wrapper
+        .flying-pictures__img-bg
+          +picture("content", "background-bench", "png", "1312", "694", "Hall with a bench.")
+        .flying-pictures__img.flying-pictures__img--palm.palm(data-animation="palm")
+          +picture("content", "palm", "png", "265", "353", "Palm.")
+        .flying-pictures__img.flying-pictures__img--bust.bust(data-animation="bust")
+          +picture("content", "bust", "png", "424", "565", "Bust.")
